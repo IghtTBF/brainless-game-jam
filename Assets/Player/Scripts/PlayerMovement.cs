@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerInputActions playerInputActions;
-    [SerializeField] private Camera playerCam;
+    [SerializeField] private GameObject playerCam;
     [SerializeField] private CharacterController player;
 
     private InputAction move;

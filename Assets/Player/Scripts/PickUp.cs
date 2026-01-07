@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,11 +11,11 @@ public class PickUp : MonoBehaviour
     private bool isEquipped;
     private bool isEquippable;
     
-    public Outline outline;
     public RaycastHit hit;
     private LayerMask layerMask;
     private GameObject lastHitObject;
     public float maxDist;
+    public float fireflies;
 
     void Awake()
     {
@@ -34,16 +35,20 @@ public class PickUp : MonoBehaviour
         interact.Disable();
     }
 
+    void Start()
+    {
+        fireflies = 0;
+    }
+
     void Update()
     { 
         layerMask = LayerMask.GetMask("PickUps");
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, maxDist, layerMask))
         {
-            outline.enabled = true;
             isEquippable = true;
         }
-        else{isEquippable = false; outline.enabled = false;}
+        else{isEquippable = false;}
 
         Debug.DrawRay(transform.position, transform.forward * maxDist, Color.red);
     }
@@ -52,9 +57,40 @@ public class PickUp : MonoBehaviour
     {
         if (isEquippable)
         {
-            hit.collider.gameObject.SetActive(false);
+            StartCoroutine(FadeOutFirefly(hit.collider.gameObject));
+            fireflies += 1;
+        }
+    }
+
+    IEnumerator FadeOutFirefly(GameObject firefly)
+    {
+        ParticleSystem ps = firefly.GetComponent<ParticleSystem>();
+
+        if (ps != null)
+        {
+            var emission = ps.emission;
+            emission.enabled = false;
+
+            ParticleSystemRenderer renderer = ps.GetComponent<ParticleSystemRenderer>();
+            Material mat = renderer.material;
+
+            float fadeDuration = 0.5f;
+            float elapsedTime = 0f;
+
+            Color startColor = mat.color;
+            Color targetColor = new Color(startColor.r, startColor.g, startColor.b, 0f);
+
+            while (elapsedTime < fadeDuration)
+            {
+                elapsedTime += Time.deltaTime;
+                float t = elapsedTime / fadeDuration;
+                mat.color = Color.Lerp(startColor, targetColor, t);
+                yield return null;
+            }
+
+            mat.color = targetColor;
         }
 
-        Debug.Log("'E' Pressed");
+        Destroy(firefly);
     }
 }

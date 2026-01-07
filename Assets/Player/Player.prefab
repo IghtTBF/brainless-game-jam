@@ -246,8 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821018fe1172aba4783aa21332e7348f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PickUp
-  outline: {fileID: 0}
   maxDist: 5
+  fireflies: 0
 --- !u!1 &6003430520284869387
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_Height: 1.44
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -385,7 +385,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 3
   m_Height: 1.44
-  m_Radius: 0.5
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -478,7 +478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7abfab36e6d5b8141b95e8c5f154a0fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.49999994
+      value: 0.679
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7abfab36e6d5b8141b95e8c5f154a0fe, type: 3}
       propertyPath: m_LocalPosition.y

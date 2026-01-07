@@ -228,6 +228,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashCanbag
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1804b558d4913e34583b344b74e306f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -284,6 +288,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0e36785beb5eedb48ad2a22f6c897e91, type: 3}
       propertyPath: m_Name
       value: TrashCan
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e36785beb5eedb48ad2a22f6c897e91, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -387,9 +395,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c339d0b9afa48124ca4c1de71ab9d004, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c339d0b9afa48124ca4c1de71ab9d004, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b6cf33b7d754b8498f72146e008675d, type: 2}
     - target: {fileID: 919132149155446097, guid: c339d0b9afa48124ca4c1de71ab9d004, type: 3}
       propertyPath: m_Name
       value: PlatPotSmall
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c339d0b9afa48124ca4c1de71ab9d004, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -413,7 +433,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1553772871
 MeshCollider:
@@ -462,7 +482,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 7171e592ead48d64bbb9e1e752b3f21e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -576,7 +596,7 @@ MonoBehaviour:
   m_AngularDiameter: 0.5
   diameterMultiplerMode: 0
   diameterMultiplier: 1
-  diameterOverride: 0.5
+  diameterOverride: 35.03
   celestialBodyShadingSource: 1
   sunLightOverride: {fileID: 0}
   sunColor: {r: 1, g: 1, b: 1, a: 1}
@@ -584,10 +604,10 @@ MonoBehaviour:
   moonPhase: 0.2
   moonPhaseRotation: 0
   earthshine: 1
-  flareSize: 2
+  flareSize: 0
   flareTint: {r: 1, g: 1, b: 1, a: 1}
-  flareFalloff: 4
-  flareMultiplier: 1
+  flareFalloff: 75.43
+  flareMultiplier: 0
   surfaceTexture: {fileID: 0}
   surfaceTint: {r: 1, g: 1, b: 1, a: 1}
   m_Distance: 1.5e+11
@@ -719,13 +739,13 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: -2.4405384e-30, y: 9.188e-41, z: 2.75506e-40, w: 5.142788e-39}
+  m_BoundingSphereOverride: {x: 0, y: 3.5184372e+13, z: 1.8394324e+25, w: 6.0483083e+28}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -742,13 +762,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701269093}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.32400003, w: 0.9460571}
+  m_LocalRotation: {x: 0.11856749, y: -0.04060651, z: 0.3214463, w: 0.93859744}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 37.81}
+  m_LocalEulerAnglesHint: {x: 14.399, y: 0, z: 37.81}
 --- !u!1001 &1719301425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -800,6 +820,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 23d5772cf541d1c4182f4c4c14051179, type: 3}
       propertyPath: m_Name
       value: Trashbag
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 23d5772cf541d1c4182f4c4c14051179, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -858,6 +882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrashCanLid
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5dd5a89bf8cc1842adf6f409fed77f6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -914,6 +942,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c3601e23dbc37fb49af633e102ebec64, type: 3}
       propertyPath: m_Name
       value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3601e23dbc37fb49af633e102ebec64, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
